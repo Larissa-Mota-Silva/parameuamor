@@ -6,13 +6,14 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    /* NADA de scroll no PC */
+    overflow: hidden; 
+    /* Bloqueia scroll em desktop para manter a página 100% fixa */
 }
 
 body {
     font-family: "Poppins", sans-serif;
     background: radial-gradient(circle, #35005a, #1a0026 70%);
+    /* Gradiente roxo mais escuro no fundo */
     color: white;
 }
 
@@ -21,28 +22,34 @@ body {
 /* -------------------------------------------------- */
 .intro-bg {
     background: radial-gradient(circle, #4b0082, #1a0026 70%);
+    /* Fundo mais claro que a tela principal, criando contraste */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Centraliza o botão de entrada no meio da tela */
 }
 
 .botao-brilhante {
     padding: 18px 50px;
     font-size: 22px;
     font-weight: bold;
+    /* Botão roxo com brilho que combina com o tema romântico */
     color: #fff;
     background: linear-gradient(45deg, #7d00ff, #c66bff);
     border: none;
     border-radius: 40px;
     cursor: pointer;
     box-shadow: 0 0 20px #cc8eff, 0 0 40px #9e35ff inset;
+    /* Glow externo + interno = aparência "mágica" */
     transition: 0.35s ease;
 }
 
 .botao-brilhante:hover {
     transform: scale(1.07);
+    /* Leve aumento ao passar o mouse */
     box-shadow: 0 0 30px #e3b2ff, 0 0 60px #c66bff inset;
+    /* Aumenta brilho no hover */
 }
 
 /* -------------------------------------------------- */
@@ -55,24 +62,23 @@ body {
     align-items: center;
     justify-content: center;
     padding: 0;
-    overflow: hidden;
-    /* Sem scroll no PC */
+    overflow: hidden; 
+    /* Mantém sem scroll no desktop */
 }
 
 /* CONTÊINER PRINCIPAL */
 .love-container {
     width: 100%;
     max-width: 1100px;
-    height: 100vh;
-    /* Altura fixa para caber tudo */
+    height: 100vh; 
+    /* Força layout sempre ocupando a altura inteira */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     overflow: hidden;
-    /* Sem scroll no PC */
-    padding: 5vh 0;
-    /* Espaço proporcional em cima e embaixo para centralizar melhor */
+    padding: 5vh 0; 
+    /* Espaço proporcional que funciona melhor em telas diferentes */
 }
 
 /* -------------------------------------------------- */
@@ -82,8 +88,8 @@ body {
     font-size: 28px;
     font-weight: 700;
     margin: 0;
-    /* Remove margem para melhor controle */
     text-shadow: 0 0 20px #c66bff, 0 0 35px #a347ff;
+    /* Brilho do título – deixa com visual romântico */
 }
 
 /* -------------------------------------------------- */
@@ -92,7 +98,8 @@ body {
 .timer-text {
     font-size: 20px;
     opacity: 0.8;
-    margin: 4vh 0 0 0;
+    margin: 4vh 0 0 0; 
+    /* Espaçamento proporcional abaixo do título */
 }
 
 .timer {
@@ -101,7 +108,6 @@ body {
     color: #ffccfe;
     text-shadow: 0 0 12px #d08bff;
     margin: 1vh 0 2vh 0;
-    /* Margem proporcional */
 }
 
 /* -------------------------------------------------- */
@@ -109,18 +115,17 @@ body {
 /* -------------------------------------------------- */
 .love-row {
     width: 100%;
-    flex: 1;
-    /* Ocupa o espaço restante */
+    flex: 1; 
+    /* Ocupa o espaço restante da página */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     padding: 10px 15px;
     overflow: hidden;
-    /* Sem scroll no PC */
 }
 
-/* quando a tela fica pequena, vira coluna */
+/* Quando a tela fica pequena, troca colunas por uma coluna só */
 @media (max-width: 900px) {
     .love-row {
         flex-direction: column;
@@ -131,16 +136,19 @@ body {
 }
 
 /* -------------------------------------------------- */
-/* IMAGEM / CARROSSEL */
+/* IMAGEM / CARROSSEL                                 */
 /* -------------------------------------------------- */
 .image-box {
-    width: 35vh;
+    width: 35vh; 
+    /* Proporcional à altura = mantém imagem “harmônica” em qualquer tela */
     height: 60vh;
-    max-height: calc(100vh - 250px);
-    /* NUNCA corta ou estoura a tela */
+    max-height: calc(100vh - 250px); 
+    /* Garantia de que NUNCA vai estourar a tela */
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.04);
+    /* Fundo translúcido sobre o gradiente */
     border: 2px solid rgba(200, 120, 255, 0.35);
+    /* Borda brilhante combinando com tema */
     box-shadow: 0 0 18px rgba(180, 90, 255, 0.25);
     overflow: hidden;
     transition: 0.35s ease;
@@ -150,14 +158,16 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    /* Garante que a imagem sempre preencha a caixa sem distorcer */
 }
 
 /* -------------------------------------------------- */
-/* DECLARAÇÃO          */
+/* DECLARAÇÃO (texto rolável)                         */
 /* -------------------------------------------------- */
 .declaration-box {
     max-width: 450px;
-    max-height: 55vh;
+    max-height: 55vh; 
+    /* Torna o texto rolável sem quebrar o layout */
     overflow-y: auto;
     padding: 5px 10px;
     background: none;
@@ -169,6 +179,7 @@ body {
     opacity: 0.95;
 }
 
+/* Correção específica da fonte */
 .declaration-box {
     font-size: 15px;
 }
@@ -177,6 +188,7 @@ body {
     margin-bottom: 10px;
     font-size: 30px;
     text-shadow: 0 0 12px #d08bff;
+    /* Brilho igual ao do contador */
 }
 
 /* -------------------------------------------------- */
@@ -184,7 +196,8 @@ body {
 /* -------------------------------------------------- */
 .fade-in {
     animation: fadeIn 1s ease forwards;
-    opacity: 0;
+    opacity: 0; 
+    /* Começa invisível, aparece com animação */
 }
 
 @keyframes fadeIn {
@@ -192,7 +205,6 @@ body {
         opacity: 0;
         transform: translateY(12px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -200,124 +212,102 @@ body {
 }
 
 /* -------------------------------------------------- */
-/* CAROUSEL - remover setas                           */
+/* CAROUSEL - remover setas do Bootstrap              */
 /* -------------------------------------------------- */
 .carousel-control-prev,
 .carousel-control-next {
     display: none !important;
+    /* Remove totalmente as setas */
 }
 
 /* ========================== */
-/*    TELAS MAIORES (PC GRANDES) */
+/* TELAS MAIORES (MONITORES GRANDES) */
 /* ========================== */
 @media (min-width: 1200px) {
     .love-title {
-        font-size: 50px;
-        /* Maior para completar a tela */
+        font-size: 50px; 
+        /* Preenche melhor telas grandes */
     }
-
     .timer-text {
         font-size: 24px;
     }
-
     .timer {
         font-size: 27px;
     }
-
     .declaration-box {
         font-size: 17px;
     }
-
     .declaration-box h2 {
         font-size: 30px;
     }
-
 }
 
 /* ========================== */
-/*    MOBILE — CELULAR        */
+/* MOBILE — CELULAR          */
 /* ========================== */
 @media (max-width: 768px) {
 
-    /* Permite scroll no mobile */
+    /* Permite scroll no celular, mas bloqueia no PC */
     html,
     body {
         overflow: auto;
-        /* Permite scroll vertical */
     }
 
     .love-bg {
         height: auto;
-        /* Altura automática para permitir conteúdo maior */
+        /* Altura libera para conteúdo grande */
         overflow: visible;
-        /* Permite scroll */
-        /* Background permanece o mesmo, mas garante que cubra toda a área */
         background-attachment: fixed;
-        /* Para manter o gradiente fixo se rolar */
+        /* Efeito de fundo fixo no mobile */
     }
 
     .love-container {
         height: auto;
-        /* Altura automática */
         overflow: visible;
-        /* Permite scroll */
         padding: 30px 15px;
-        /* Espaçamento interno */
     }
 
-    /* Ajustes de tamanho de fonte para mobile */
+    /* Ajustes de tamanho */
     .love-title {
         font-size: 36px;
-        /* Reduzido para não poluir */
     }
 
     .timer-text {
         font-size: 18px;
-        /* Proporcional */
     }
 
     .timer {
         font-size: 24px;
-        /* Menor para caber melhor */
     }
 
     .declaration-box {
         font-size: 16px;
-        /* Texto menor */
         line-height: 1.65;
         padding: 0 10px;
         text-align: center;
-        max-height: none;
-        /* Remove limite de altura */
+        max-height: none; 
+        /* Remove limite para mobile */
         overflow-y: auto;
-        /* Scroll se necessário */
     }
 
     .declaration-box h2 {
         font-size: 24px;
-        /* Título menor */
     }
 
-    /* Botão na intro também proporcional */
     .botao-brilhante {
         font-size: 18px;
-        /* Menor no mobile */
         padding: 15px 40px;
-        /* Padding ajustado */
     }
 
-    /* Contador */
     .timer-text,
     .timer {
         margin-bottom: 20px;
-        /* Espaço extra */
     }
 
-    /* CAIXA DA IMAGEM NO CELULAR */
     .image-box {
         border-radius: 14px;
         margin: 0 auto 35px auto;
-        /* Centraliza e espaço abaixo */
+        /* Centraliza imagem no mobile */
         padding: 0;
     }
 
@@ -330,43 +320,43 @@ body {
 }
 
 /* -------------------------------------------------- */
-/* ESTILIZAÇÃO DA SCROLLBAR DA DECLARAÇÃO             */
+/* SCROLLBAR ESTILIZADA                               */
 /* -------------------------------------------------- */
 .declaration-box::-webkit-scrollbar {
     width: 8px;
-    /* Largura da scrollbar */
+    /* Scrollbar fina → mais elegante */
 }
 
 .declaration-box::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
-    /* Fundo da trilha, sutil */
     border-radius: 10px;
 }
 
 .declaration-box::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, #7d00ff, #c66bff);
-    /* Cor roxa brilhante, combinando com o tema */
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(200, 120, 255, 0.5);
-    /* Brilho sutil */
+    /* Efeito glow */
 }
 
 .declaration-box::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #c66bff, #e3b2ff);
-    /* Mais claro no hover */
 }
 
 /* -------------------------------------------------- */
 /* LINK DO SPOTIFY                                     */
 /* -------------------------------------------------- */
 .spotify-link {
-    color: #ffccfe; /* Cor roxa clara, combinando com o tema */
-    text-decoration: none; /* Remove sublinhado padrão */
-    font-weight: bold; /* Negrito para destacar */
-    transition: 0.3s ease; /* Transição suave */
+    color: #ffccfe;
+    /* Cor combinando com o contador e detalhes */
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
     font-size: 17px;
 }
+
 .spotify-link:hover {
-    color: #c66bff; /* Cor mais escura no hover */
-    text-shadow: 0 0 10px rgba(200, 120, 255, 0.5); /* Brilho sutil */
+    color: #c66bff;
+    text-shadow: 0 0 10px rgba(200, 120, 255, 0.5);
+    /* Pequeno brilho no hover */
 }
