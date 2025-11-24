@@ -1,13 +1,10 @@
-<?php
-$startDate = strtotime("2025-08-18 16:08:00");
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rafael & Larissa</title>
+    <title>Rafael & Larissa</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,17 +14,13 @@ $startDate = strtotime("2025-08-18 16:08:00");
 
     <div class="love-container fade-in">
 
-        <!-- TÍTULO -->
         <h1 class="love-title">Rafael & Larissa</h1>
 
-        <!-- CONTADOR -->
         <p class="timer-text">Vocês estão juntos há:</p>
         <p id="contador" class="timer"></p>
 
-        <!-- LINHA COM IMAGEM + TEXTO -->
         <div class="love-row">
 
-            <!-- CARROSSEL -->
             <div class="image-box">
                 <div id="carouselLove" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
@@ -58,7 +51,6 @@ $startDate = strtotime("2025-08-18 16:08:00");
                 </div>
             </div>
 
-            <!-- DECLARAÇÃO -->
             <div class="declaration-box">
 
                 <h2>Amor</h2>
@@ -139,7 +131,7 @@ $startDate = strtotime("2025-08-18 16:08:00");
 
                     eu te amo.<br>
                 </p>
-                <!-- LINK PARA A PLAYLIST NO SPOTIFY -->
+
                 <p><a href="https://open.spotify.com/playlist/3kNGCbz9RdtJGJJfqnGxPz?si=iWgFltAtTk6J8Bk_LlcUSA" target="_blank" class="spotify-link">[Ouça nossa playlist no Spotify 💜]</a></p>
             </div>
 
@@ -150,7 +142,8 @@ $startDate = strtotime("2025-08-18 16:08:00");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        const startDate = <?php echo $startDate; ?> * 1000;
+        // Data inicial (igual à do PHP)
+        const startDate = new Date("2025-08-18 16:08:00").getTime();
 
         function atualizarContador() {
             const now = Date.now();

@@ -135,7 +135,7 @@ body {
 /* -------------------------------------------------- */
 .image-box {
     width: 35vh;
-    height: 65vh;
+    height: 60vh;
     max-height: calc(100vh - 250px);
     /* NUNCA corta ou estoura a tela */
     border-radius: 18px;
